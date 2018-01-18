@@ -1,0 +1,295 @@
+@import "3L.less";
+@import "http://fonts.googleapis.com/css?family=Berkshire+Swash";
+
+.normalize();
+
+body {
+    background: url(img/home_page_bg.jpg);
+}
+
+#frame {
+    width: inherit;
+    height: 100%;
+    display: block;
+}
+
+.v-wrap {
+    height: inherit;
+    white-space: nowrap;
+    text-align: center;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: inherit;
+    }
+}
+
+.content {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+#wrap {
+    width: 60em;
+    margin: 2em auto 0;
+    height: 99em;
+    
+    #wrap_content {
+        background: #FFDE40;
+        border: 4px solid #fff;
+        overflow: hidden;
+        width: 59.5em;
+        display: block;
+        height: inherit;
+        
+        .content {
+            
+            div {
+                display: inline-block;
+                width: 24em;
+                line-height: 2em;
+                
+                span {
+                    font-size: 24px;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                &#left {
+                    text-align: right;
+                }
+                
+                &#right {
+                    text-align: left;
+                    margin-left: 5em;
+                    padding-left: 5em;
+                    border-left: 1px solid #000;
+                    
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wrap_left {
+    display: block;
+    float: left;
+    background: #FFDE40;
+    border: 4px solid #fff;
+    overflow: hidden;
+    width: 40em;
+    height: inherit;
+    
+    #content {
+        width: 100%;
+        display: block;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+}
+
+#wrap_right {
+    display: block;
+    float: right;
+    background: #FFDE40;
+    border: 4px solid #fff;
+    overflow: hidden;
+    width: 18em;
+    height: inherit;
+    
+    #chat {
+        width: 100%;
+        display: block;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+}
+
+#vegeD {
+    
+    div {
+        float: right;
+        
+        span {
+            font: 18px 'Berkshire Swash';
+            text-decoration: line-through;
+
+            &::before {
+                content: "V";
+                display: block;
+                margin-left: .5em;
+            }
+
+            &::after {
+                content: "";
+                position: relative;
+                left: .5em;
+                bottom: 13px;
+                display: block;
+                width: .75em;
+                border-top: 1px solid;
+            }
+        }
+    }
+}
+
+iframe#info {
+    float: right;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 25%;
+    overflow: hidden;
+    
+    body {
+        background: transparent;
+    }
+}
+
+div#info {
+    margin: 5px 1.25em 0 0;
+    font-size: 1.1em;
+    font-family: arial, sans-serif;
+    float: right;
+    background: transparent;
+
+    & > div {
+    }
+
+    #info_left {
+        border: 2px solid rgb(153,101,21);
+        border-radius: 4px;
+        display: inline-block;
+        background-color: #fff;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 46px;
+        height: 46px;
+    }
+
+    #info_right {
+        float: right;
+        margin-top: 3px;
+        margin-left: 1em;
+
+        #name {
+            margin: auto;
+        }
+
+        #userVegeD {
+
+            div {
+                float: right;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.shopitem {
+    display: inline-block;
+    
+    &#vegemite {
+        width: 224px;
+        height: 314px;
+        background: url(img/vegemite.png);
+    }
+    
+    &#vegeChoco {
+        width: 208px;
+        height: 408px;
+        background: url(img/vegeChoco.png);
+    }
+        
+    & input {
+        width: inherit;
+    }
+    
+    & .button {
+        -webkit-appearance: button;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 10px;
+        width: 50px;
+        height: 2em;
+        line-height: 2em;
+    }
+}
+
+#header {
+    margin: 2em auto;
+    width: 60em;
+    
+    #header_cont {
+        width: 100%;
+        background-image: linear-gradient(#ffd205, #fbe036, #ffd205);
+        border-radius: 12px;
+        box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.75);
+        height: 60px;
+        font: 1.1em georgia;
+        
+        #timer {
+            margin-top: 20px;
+        }
+    
+        #nav {
+            margin: 20px 20px 20px 0;
+            float: left;
+            
+            img {
+                position: absolute;
+                top: 2px;
+            }
+            
+            .navButton {
+                color: #000;
+                float: left;
+                cursor: pointer;
+                border-left: 1px solid;
+                padding-left: .5em;
+                margin-left: .5em;
+
+                &.current {
+                    cursor: auto;
+                    text-decoration: underline;
+                }
+
+                &:first-of-type {
+                    padding: 0;
+                    margin: 0 0 0 140px;
+                    border: none;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
